@@ -1,6 +1,12 @@
-import { Router } from "express";
-
-import * as numberConverterController from "../controllers/numberConverter.js";
+import {
+  Router
+} from "express";
+import {
+  ROMAN_CONVERTER_APP_ROUTE,
+  NOT_FOUND_ERR
+} from "../utils/constants";
+import Boom from '@hapi/boom';
+import * as numberConverterController from "../controllers/numberConverter";
 
 const numberConverterRouter = Router();
 
@@ -25,16 +31,12 @@ const numberConverterRouter = Router();
  *         content: plain/text
  */
 numberConverterRouter.get(
-  "/romannumeral",
+  ROMAN_CONVERTER_APP_ROUTE,
   numberConverterController.convertToRomanNumeralVinculum
 );
 
 numberConverterRouter.get("*", (req, res) => {
-  res.status(404).json({
-    statusCode: 404,
-    error: "Not Found",
-    message: "URL not found"
-  });
+  res.status(404).json(Boom.notFound(NOT_FOUND_ERR).output);
 });
 
 export default numberConverterRouter;

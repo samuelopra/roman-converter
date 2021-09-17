@@ -8,7 +8,7 @@ dotenv.config();
  */
 const swaggerDefinition = {
     info: {
-        title: process.env.APP_NAME || 'shit',
+        title: process.env.APP_NAME,
         version: process.env.APP_VERSION,
         description: process.env.APP_DESCRIPTION
     },

@@ -4,6 +4,9 @@ import morgan from "morgan";
 import logger from "./utils/logger";
 import numberConverterRouter from "./routes/numberConverter.js";
 import swaggerSpec from "./utils/swagger";
+import {
+  SWAGGER_API_ROUTE
+} from "./utils/constants";
 
 dotenv.config();
 
@@ -17,13 +20,13 @@ app.use(
 );
 app.use(morgan("common"));
 //const router = express.Router();
-const PORT = process.env.PORT || 9090;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
 const swaggerUI = require("swagger-ui-express");
 
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
+app.use(SWAGGER_API_ROUTE, swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 app.use("/", numberConverterRouter);
 
 //so port does not conflict while running jest tests

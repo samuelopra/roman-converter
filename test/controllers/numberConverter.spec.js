@@ -32,7 +32,7 @@ describe('Number to Roman Numeral Converter Integration Tests', () => {
     describe('Test happy cases', () => {
         it('should return 200 status and correct app info', done => {
             request(app)
-                .get('/romannumeral?query=100')
+                .get(ROMAN_CONVERTER_APP_ROUTE + '?query=100')
                 .set('Accept', 'applicaton/json')
                 .expect('Content-Type', /text/)
                 .expect(200, done);
@@ -40,7 +40,7 @@ describe('Number to Roman Numeral Converter Integration Tests', () => {
 
         it('should return 200 status and correct app info', done => {
             request(app)
-                .get('/romannumeral?query=4000')
+                .get(ROMAN_CONVERTER_APP_ROUTE + '?query=4000')
                 .set('Accept', 'applicaton/json')
                 .expect('Content-Type', /text/)
                 .expect(200, done);

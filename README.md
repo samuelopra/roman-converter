@@ -6,7 +6,7 @@
 - [Information](#references)
 - [Getting Started](#getting_started)
 - [Dependencies](#dependencies)
-- [Development Methodology](#methodology)
+- [Development](#development)
 - [Package Layout](#package-layout)
 - [Testing](#testing)
 - [Error Handling](#errors)
@@ -44,9 +44,6 @@ These instructions will get you a copy of the project up and running on your loc
 - [winston](https://www.npmjs.com/package/winston): middleware to save logs to a file
 - [blns](https://www.npmjs.com/package/blns): Big List of Naughty Strings to test for malicious input
 - [express-status-monitor](https://www.npmjs.com/package/express-status-monitor): Set up health monitoring
-
-### Dev Dependencies
-
 - [babel](https://www.npmjs.com/package/@babel/core) : javascript transpiler since im using ES6 syntax
 - [jest](https://www.npmjs.com/package/jest) : popular unit testing framework
 - [supertest](https://www.npmjs.com/package/supertest) : higher level abstraction to test http API calls
@@ -83,7 +80,7 @@ Example Input
 http://localhost:8080/romannumeral?query=59
 ```
 
-## Development Methodology <a name = "methodology"></a>
+## Development steps and Principals <a name = "development"></a>
 
 ### 1. Understanding and Requirements
 

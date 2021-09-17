@@ -31,6 +31,9 @@ export function convertToRomanNumeralVinculum(num) {
         throw Boom.badRequest(CONVERTER_ERRORS.OUT_OF_RANGE);
     }
 
+    //parse valid num into integer to trim leading zeros
+    num = parseInt(num, 10).toString();
+
     // convert the number to an array of digits to get decimal place
     const digitArray = num.split('');
 

@@ -31,6 +31,16 @@ describe('Roman Numeral Converter Service', () => {
         expect(NumberConverterService.convertToRomanNumeralVinculum('2200000000')).toEqual('M̿M̿C̿C̿');
     });
 
+    it('it should convert numbers with leading zeros', () => {
+        expect(NumberConverterService.convertToRomanNumeralVinculum('004000')).toEqual('I̅V̅');
+        expect(NumberConverterService.convertToRomanNumeralVinculum('000010003000')).toEqual('X̿MMM');
+        expect(NumberConverterService.convertToRomanNumeralVinculum('0001400000000')).toEqual('M̿C̿D̿');
+        expect(NumberConverterService.convertToRomanNumeralVinculum('00803000')).toEqual('D̅C̅C̅C̅MMM');
+        expect(NumberConverterService.convertToRomanNumeralVinculum('000000005599')).toEqual('V̅DXCIX');
+        expect(NumberConverterService.convertToRomanNumeralVinculum('0000000000000000650000')).toEqual('D̅C̅L̅');
+        expect(NumberConverterService.convertToRomanNumeralVinculum('000002200000000')).toEqual('M̿M̿C̿C̿');
+    });
+
     it('it should fail with numbers below the lower limit', () => {
         expect(() => {
             NumberConverterService.convertToRomanNumeralVinculum('-2');
@@ -48,26 +58,6 @@ describe('Roman Numeral Converter Service', () => {
             NumberConverterService.convertToRomanNumeralVinculum('-45902');
         }).toThrowError();
     });
-
-    it('it should fail with numbers below the lower limit', () => {
-        expect(() => {
-            NumberConverterService.convertToRomanNumeralVinculum('-2');
-        }).toThrowError(CONVERTER_ERRORS.OUT_OF_RANGE);
-
-        expect(() => {
-            NumberConverterService.convertToRomanNumeralVinculum('-2200000000');
-        }).toThrowError(CONVERTER_ERRORS.OUT_OF_RANGE);
-
-        expect(() => {
-            NumberConverterService.convertToRomanNumeralVinculum('-100');
-        }).toThrowError(CONVERTER_ERRORS.OUT_OF_RANGE);
-
-        expect(() => {
-            NumberConverterService.convertToRomanNumeralVinculum('-45902');
-        }).toThrowError(CONVERTER_ERRORS.OUT_OF_RANGE);
-    });
-
-
     it('it should fail with numbers above the upper limit', () => {
         expect(() => {
             NumberConverterService.convertToRomanNumeralVinculum('100000000000');

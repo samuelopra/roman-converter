@@ -211,6 +211,8 @@ export const LOWER_LIMIT = 1;
 
 export const UPPER_LIMIT = 2200000000;
 
+export const NOT_FOUND_ERR = 'URL not found';
+
 export const CONVERTER_ERRORS = {
     NO_ENTRY: 'No number entered',
     INVALID_NUMBER: 'Must be a valid number',
@@ -218,6 +220,10 @@ export const CONVERTER_ERRORS = {
 };
 
 export const ROMAN_CONVERTER_APP_ROUTE = '/romannumeral';
+
+export const SWAGGER_API_ROUTE = '/api-docs';
+
+export const MONITORING_ROUTE = '/status';
 
 // I̅ V̅ X̅ L̅ C̅ D̅ M̅ vinculum x 1,000
 // I̿ V̿ X̿ L̿ C̿ D̿ M̿ 1,000^2
