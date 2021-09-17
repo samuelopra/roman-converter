@@ -96,7 +96,7 @@ Real-time monitoring is important for applciation performance and efficiency. It
 
 [After starting the application](#getting_started), the dashboard can be accessed at `http://localhost:8080/status`
 
-## Development steps and Principals <a name = "development"></a>
+## Development Steps and Principals <a name = "development"></a>
 
 ### 1. Understanding and Requirements
 
