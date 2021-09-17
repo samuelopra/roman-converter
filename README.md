@@ -70,9 +70,7 @@ npm run dev
 
 4. After the server successfully starts, use your browser or querying tool to access the API endpoint
 
-#### endpoint:
-
-http://localhost:8080/romannumeral?query={integer} `where {integer} is any integer between 1 and 2,200,000,000 (inclusive)`
+The endpoint is http://localhost:8080/romannumeral?query={integer} where {integer} is any integer between 1 and 2,200,000,000 (inclusive)
 
 Example Input
 
