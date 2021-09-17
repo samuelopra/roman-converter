@@ -6,13 +6,13 @@
 - [Information](#references)
 - [Getting Started](#getting_started)
 - [Dependencies](#dependencies)
+- [Logging](#logging)
+- [API Documentation](#apidocs)
+- [Monitoring](#monitoring)
 - [Development](#development)
 - [Package Layout](#package-layout)
 - [Testing](#testing)
 - [Error Handling](#errors)
-- [Logging](#logging)
-- [API Documentation](#apidocs)
-- [Monitoring](#monitoring)
 
 ## About <a name = "about"></a>
 
@@ -79,6 +79,22 @@ Example Input
 ```
 http://localhost:8080/romannumeral?query=59
 ```
+
+## Logging <a name = "logging"></a>
+
+Logs output to the console and saves to logs/server.log and clears after 14 days. You will be able to see information such as the endpoint hit, status, date and browser executed.
+
+## API Documentation <a name = "apidocs"></a>
+
+[When you have your application running](#getting_started), you can view the full API documentation by going to this URL here:
+`http://localhost:8080/api-docs/`
+Swagger enables you to automatically generate API documentation through swaggerdocs in code.
+
+## Health Monitoring <a name = "monitoring"></a>
+
+Real-time monitoring is important for applciation performance and efficiency. It will allow you to see issues and potential outages before they happen. We used express-status-monitor to use dashboards to see important health information about our application. It is a simple, self-hosted module that uses Socket.io and Chart.js under the hood to report realtime server metrics for Express-based node servers.
+
+[After starting the application](#getting_started), the dashboard can be accessed at `http://localhost:8080/status`
 
 ## Development steps and Principals <a name = "development"></a>
 
@@ -187,19 +203,3 @@ This will map to CONVERTER_ERRORS.INVALID_NUMBER, which will return a \_400 Bad 
 "message": "Must be a valid number"
 }
 ```
-
-## Logging <a name = "logging"></a>
-
-Logs output to the console and saves to logs/server.log and clears after 14 days. You will be able to see information such as the endpoint hit, status, date and browser executed.
-
-## API Documentation <a name = "apidocs"></a>
-
-[When you have your application running](#getting_started), you can view the full API documentation by going to this URL here:
-`http://localhost:8080/api-docs/`
-Swagger enables you to automatically generate API documentation through swaggerdocs in code.
-
-## Health Monitoring <a name = "monitoring"></a>
-
-Real-time monitoring is important for applciation performance and efficiency. It will allow you to see issues and potential outages before they happen. We used express-status-monitor to use dashboards to see important health information about our application. It is a simple, self-hosted module that uses Socket.io and Chart.js under the hood to report realtime server metrics for Express-based node servers.
-
-[After starting the application](#getting_started), the dashboard can be accessed at `http://localhost:8080/status`
