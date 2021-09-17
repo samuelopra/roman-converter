@@ -1,0 +1,37 @@
+import {
+    ROMAN_NUMERAL_FIRST_DIGIT_VALUES,
+    ROMAN_NUMERAL_SECOND_DIGIT_VALUES,
+    ROMAN_NUMERAL_THIRD_DIGIT_VALUES,
+    ROMAN_NUMERAL_FOURTH_DIGIT_VALUES,
+    ROMAN_NUMERAL_FIFTH_DIGIT_VALUES,
+    ROMAN_NUMERAL_SIXTH_DIGIT_VALUES,
+    ROMAN_NUMERAL_SEVENTH_DIGIT_VALUES,
+    ROMAN_NUMERAL_EIGHTH_DIGIT_VALUES,
+    ROMAN_NUMERAL_NINTH_DIGIT_VALUES,
+    ROMAN_NUMERAL_TENTH_DIGIT_VALUES
+} from './constants';
+
+/**
+ * 
+ * Construct a map with roman numeral value arrays
+ * @returns {Map}  map for looking up Roman Numeral values by digit
+ * 
+ */
+export function buildRomanMap() {
+
+    let romanMap = new Map();
+
+    romanMap.set(1, ROMAN_NUMERAL_FIRST_DIGIT_VALUES);
+    romanMap.set(2, ROMAN_NUMERAL_SECOND_DIGIT_VALUES);
+    romanMap.set(3, ROMAN_NUMERAL_THIRD_DIGIT_VALUES);
+    romanMap.set(4, ROMAN_NUMERAL_FOURTH_DIGIT_VALUES);
+    romanMap.set(5, ROMAN_NUMERAL_FIFTH_DIGIT_VALUES);
+    romanMap.set(6, ROMAN_NUMERAL_SIXTH_DIGIT_VALUES);
+    romanMap.set(7, ROMAN_NUMERAL_SEVENTH_DIGIT_VALUES);
+    romanMap.set(8, ROMAN_NUMERAL_EIGHTH_DIGIT_VALUES);
+    romanMap.set(9, ROMAN_NUMERAL_NINTH_DIGIT_VALUES);
+    romanMap.set(10, ROMAN_NUMERAL_TENTH_DIGIT_VALUES);
+
+    return romanMap;
+
+}
