@@ -70,9 +70,7 @@ npm run dev
 
 4. After the server successfully starts, use your browser or querying tool to access the API endpoint
 
-#### endpoint:
-
-http://localhost:8080/romannumeral?query={integer} `where {integer} is any integer between 1 and 2,200,000,000 (inclusive)`
+The endpoint is http://localhost:8080/romannumeral?query={integer} where {integer} is any integer between 1 and 2,200,000,000 (inclusive)
 
 Example Input
 
@@ -100,7 +98,7 @@ Real-time monitoring is important for applciation performance and efficiency. It
 
 ### Test Driven Development
 
-After choosing our tools and frameworks, we can start writing out unit tests in jest. Since we know the required numerical inputs, we can compare to an expected output befoee we begin development. We already thought of the edge cases in our analysis. This is where we can create our edge case tests. For example: no input, input out of range or invalid integers.
+After choosing our tools and frameworks, we can start writing out unit tests in jest. Since we know the required numerical inputs, we can compare to an expected output before we begin development. We already thought of the edge cases in our analysis. This is where we can create our edge case tests. For example: no input input out of range or invalid integers.
 
 ### Separation of Concerns
 
