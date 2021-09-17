@@ -62,7 +62,7 @@ git clone
 npm install
 ```
 
-3. Once all dependencies are installed, then in the root directory, **run**:
+3. Once all dependencies are installed, then in the root directory, run:
 
 ```
 npm run dev
@@ -96,21 +96,13 @@ Real-time monitoring is important for applciation performance and efficiency. It
 
 [After starting the application](#getting_started), the dashboard can be accessed at `http://localhost:8080/status`
 
-## Development steps and Principals <a name = "development"></a>
+## Development Principals <a name = "development"></a>
 
-### 1. Understanding and Requirements
-
-A considerable amount of time must be spent reading over the problem and understanding the input and output. This is where we brainstorm and think of any edgecases we might have. This is also where we read any Roman Numeral documentation, along with its Vinculum representations and understand what we have to output.
-
-### 2. Application Design
-
-After understanding requirements, we can now choose the tools, technologies, libraries and frameworks we will use in our development. We know that we have to build a lightweight API, so NodeJS with Express was a good choice. A simple and efficient testing framework was necessary as well, so we went with jest and supertest since we will use http calls. Since external users will be using our application, it was best to keep it lightweight and easy to use, which is why we chose these tools.
-
-### 3. Test Driven Development
+### Test Driven Development
 
 After choosing our tools and frameworks, we can start writing out unit tests in jest. Since we know the required numerical inputs, we can compare to an expected output befoee we begin development. We already thought of the edge cases in our analysis. This is where we can create our edge case tests. For example: no input, input out of range or invalid integers.
 
-### 4. Separation of Concerns
+### Separation of Concerns
 
 One of the themes throughout development of this project has been a separation of concerns. Each module should accomplish one thing only. We will explain further in the Package Layout(#package-layout). One of the goals of this project was to make each function and component easy to understand and test and simulate production level structure.
 
@@ -129,6 +121,7 @@ roman-converter/
         utils/
             constants.js
             RomanMapBuilder.js
+            swagger.js
         index.js
     test/
         controllers/
@@ -157,8 +150,8 @@ roman-converter/
 
 ## Testing <a name = "testing"></a>
 
-- **unit tests**: written with [jest](https://www.npmjs.com/package/jest), tests multiple inputs, edge cases, negatives, strings
-- **integration tests**: written with jest and [supertest](https://www.npmjs.com/package/supertest), tests request calls and invalid routes.
+- **Unit Tests**: written with [jest](https://www.npmjs.com/package/jest), tests multiple inputs, edge cases, negatives, strings.
+- **Integration Tests**: written with jest and [supertest](https://www.npmjs.com/package/supertest), tests request calls and invalid routes.
 
 ### Run tests with
 
