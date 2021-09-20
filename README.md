@@ -53,7 +53,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the application
 
 ```
-git clone
+git clone https://github.com/samuelopra/roman-converter.git
 ```
 
 2. Install all dependencies from the root project directory
@@ -75,12 +75,12 @@ The endpoint is http://localhost:8080/romannumeral?query={integer} where {intege
 Example Input
 
 ```
-http://localhost:8080/romannumeral?query=59
+http://localhost:8080/romannumeral?query=8000
 ```
 
 ## Logging <a name = "logging"></a>
 
-Logs output to the console and saves to logs/server.log and clears after 14 days. You will be able to see information such as the endpoint hit, status, date and browser executed.
+Logs output to the console and saves to *logs/server.log* and clears after 14 days. You will be able to see information such as the endpoint hit, status, date and browser executed.
 
 ## API Documentation <a name = "apidocs"></a>
 
